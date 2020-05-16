@@ -3,6 +3,7 @@
 - Calcula el factorial de un número.
 - Usando MVC ASP.NET Core
 
+<<<<<<< HEAD
 ### Ejemplo
 
 ----
@@ -10,6 +11,15 @@
 ### Factorial de 4
 
 ** Factorial de 4  = 24 **
+=======
+###Ejemplo
+
+----
+
+###Factorial de 4
+
+**Factorial de 4  = 24**
+>>>>>>> ad8d02bbfff2329b45b21560593f487ba996797e
 
 | -  | -  |  - | - | - |
 | :-
