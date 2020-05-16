@@ -1,0 +1,48 @@
+﻿@model FactorialMVC.Models.Factorial
+
+<h1>Calcular el factorial de un número</h1>
+
+@using (Html.BeginForm())
+{
+     <div class="col-md-12 form-row align-items-center">
+        <div class="col-auto">
+            @Html.TextBoxFor(f => f.Number,
+                new { @class = "form-control md-10", placeholder = "Ingresa un Número" })
+        </div>
+        <div class="col-auto">
+            <input class="btn btn-primary md-2" type="submit" value="Calcular" />
+        </div>
+
+     </div>
+}
+
+
+@if (ViewBag.value != null)
+{
+    <br />
+    <h3>Factorial del número: @ViewBag.resultado.Number = @ViewBag.resultado.Result</h3>
+    <div class=" col-md-7 table-responsive">
+        <table class="table">
+
+            @{
+                int count = 1;
+                long aux = 1;
+
+                foreach (var item in ViewBag.resultado.Results)
+                {
+                    <tr>
+                        <td>@aux</td>
+                        <td>*</td>
+                        <td>@count</td>
+                        <td>=</td>
+                        <td>@item</td>
+                    </tr>
+
+                    aux = ViewBag.resultado.Results[count - 1];
+                    count++;
+                }
+            }
+
+        </table>
+    </div>
+}
